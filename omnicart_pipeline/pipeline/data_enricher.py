@@ -1,8 +1,8 @@
 import pandas as pd
 import ast   #importing ast module to safely evaluate strings containing Python literals
 
-users_data_df = pd.read_csv(r"omnicart_pipeline/pipeline/data_and_exported_files\users_data.csv")
-products_data_df = pd.read_csv(r"omnicart_pipeline/pipeline/data_and_exported_files\products_data.csv")
+users_data_df = pd.read_csv(r"omnicart_pipeline/pipeline/data_and_exported_files/users_data.csv")
+products_data_df = pd.read_csv(r"omnicart_pipeline/pipeline/data_and_exported_files/products_data.csv")
 
 print("Users DataFrame Info:", users_data_df.info())
 print("-------------------------------")
@@ -90,4 +90,4 @@ def handle_null_revenue(df):
     return df
 
 transformed_data = handle_null_revenue(cleaned_df) #calling the function to create 'revenue' column
-transformed_data.to_csv(r"omnicart_pipeline/pipeline/data_and_exported_files\transformed_data.csv", index=False) #saving the transformed data to a csv file    
+transformed_data.to_csv(r"omnicart_pipeline/pipeline/data_and_exported_files/transformed_data.csv", index=False) #saving the transformed data to a csv file    
