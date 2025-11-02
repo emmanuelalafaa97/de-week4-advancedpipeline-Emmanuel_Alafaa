@@ -1,5 +1,45 @@
 import pandas as pd
 import ast   #importing ast module to safely evaluate strings containing Python literals
+from api_client import APIClient
+
+
+client = APIClient()   # must import APIClient from the appropriate module
+user_data = client.get_user(1) # This returns a list of dicts
+if user_data:
+    df = pd.DataFrame(user_data)    #converted to a dataframe 
+    print("Successfully created DataFrame!")
+    print(df.head()) # Display the first 5 rows
+else:
+    print("Failed to fetch user data.")
+
+
+Product_data = client.get_product(1)
+if Product_data:
+    prod_df = pd.DataFrame(Product_data)
+    print("Products dataframe successfully created")
+    print(prod_df.head())
+else:
+   print(("Failed to fetch Product data"))
+
+
+Users_data = client.get_all_users()
+if Users_data:
+    users_df = pd.DataFrame(Users_data)
+    print("All Users dataframe successfully created")
+    print(users_df.head())
+    users_df.to_csv(r"omnicart_pipeline/pipeline/data_and_exported_files/users_data.csv",index=False)
+else:
+   print(("Failed to fetch users data"))
+
+All_products_data = client.get_all_products()
+if All_products_data:
+    prod_df = pd.DataFrame(All_products_data)
+    print("Products dataframe successfully created")
+    print(prod_df.head())
+    #save the dataframe in a csv file
+    prod_df.to_csv(r"omnicart_pipeline/pipeline/data_and_exported_files/products_data.csv", index=False)
+else:
+   print(("Failed to fetch Product data"))
 
 users_data_df = pd.read_csv(r"omnicart_pipeline/pipeline/data_and_exported_files/users_data.csv")
 products_data_df = pd.read_csv(r"omnicart_pipeline/pipeline/data_and_exported_files/products_data.csv")
