@@ -76,7 +76,7 @@ cleaned_df = clean_data(df)      #Then use the clean_data function
 cleaned_df.head()              #print out the first 5 rows to see the result
 
 #save the dataframe to a csv file and check it out
-#cleaned_df.to_csv(r"week4\data_and_other_info\data_exported\cleaned_data.csv", index=False)
+#cleaned_df.to_csv(r"omnicart_pipeline/pipeline/data_and_exported_files/cleaned_data.csv", index=False)
 
 #Second_cleaned_df = clean_data(cleaned_df)  # you can run the clean_data function again if needed
 #Second_cleaned_df.head()
