@@ -1,14 +1,18 @@
 import requests
 import logging
+from pipeline.config import ConfigManager
 
 # Configure basic logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class APIClient:
     """A simple wrapper for the fakestore API."""
+
+    CONFIGMANAGER = ConfigManager()
     
     def __init__(self, base_url):
-         self.base_url = base_url
+         self.base_url = APIClient.CONFIGMANAGER.get("API", "base_url")
+         self.limit = int(APIClient.CONFIGMANAGER.get("PAGINATION", "pagination_limit"))
 
     def get_user(self, user_id: int) -> dict:
          """Fetches a single user by their ID."""
