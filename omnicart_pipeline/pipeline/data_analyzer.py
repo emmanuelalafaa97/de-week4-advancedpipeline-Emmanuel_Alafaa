@@ -3,7 +3,7 @@ import numpy as np
 import math
 from data_enricher import Enricher
 
-#data = pd.read_csv(r"week4\data_and_other_info\data_exported\transformed_data.csv")
+#data = pd.read_csv(r"omnicart_pipeline/data_exported/transformed_data.csv")
 
 
 class Analyzer():
