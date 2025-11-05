@@ -35,7 +35,7 @@ class Analyzer():
 
     #top_ratings()
     # save final report
-    #analyzed_df.to_json(r"week4\data_and_other_info\data_exported\sellers_performance_report", index=False)
+    #analyzed_df.to_json(r"omnicart_pipeline/data_exported/sellers_performance_report", index=False)
 
     def all_analysis(df : pd.DataFrame) -> dict :
         # Group by username and compute the three required metrics
@@ -55,7 +55,7 @@ class Analyzer():
 
     if __name__ == "__main__":
          
-     data = pd.read_csv(r"week4\data_and_other_info\data_exported\transformed_data.csv")
+     data = pd.read_csv(r"omnicart_pipeline/data_exported/transformed_data.csv")
      #if we exported or saved the data to a file then we can retrieve the data and pass it into the "all_analysis()" function
      # otherwise we just pass or call the "Enricher.data_enricher" inside the "all_analysis()" function
      #data = Enricher.data_enricher()
