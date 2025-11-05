@@ -11,7 +11,7 @@ class Enricher:
                     users_df = pd.DataFrame(Users_data)
                     print("All Users dataframe successfully created")
                     print(users_df.head())
-                    #users_df.to_csv(r"week4\data_and_other_info\data_exported\users_data.csv",index=False)
+                    users_df.to_csv(r"omnicart_pipeline/data_exported/users_data.csv",index=False)
              else:
                      print(("Failed to fetch users data"))
 
@@ -21,7 +21,7 @@ class Enricher:
                      print("Products dataframe successfully created")
                      print(prod_df.head())
                      #save the dataframe in a csv file
-                     #prod_df.to_csv(r"week4\data_and_other_info\data_exported\products_data.csv", index=False)
+                     prod_df.to_csv(r"omnicart_pipeline/data_exported/products_data.csv", index=False)
              else:
                      print(("Failed to fetch Product data"))
     
