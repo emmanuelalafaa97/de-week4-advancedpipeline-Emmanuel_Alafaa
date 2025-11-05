@@ -6,7 +6,7 @@ from data_enricher import Enricher
 from configparser import ConfigParser
 from api_client import APICLIENT
 from data_analyzer import Analyzer
-from data_clean import Cleaning
+from data_cleaning import Cleaning
 
 current_dir = os.getcwd()
 
