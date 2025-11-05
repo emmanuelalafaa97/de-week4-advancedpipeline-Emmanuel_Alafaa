@@ -10,7 +10,7 @@ from data_cleaning import Cleaning
 
 current_dir = os.getcwd()
 
-class pipeline:
+class Pipeline:
 
     def __init__(self):
         # Call parent class's __init__
@@ -50,7 +50,7 @@ class pipeline:
     
     
 if __name__ == "__main__":
-    p = pipeline()
+    p = Pipeline()
     result = p.run()
     print("\nAnalysis result (head):")
     try:
