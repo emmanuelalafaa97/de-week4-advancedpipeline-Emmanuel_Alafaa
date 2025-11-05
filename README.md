@@ -18,10 +18,10 @@
 * Externalize settings like API URLs and pagination limits into a config file.
 
 <br>This project uses the Fake Store API:
-  `` 
+  ``` 
      https://fakestoreapi.com/
 
-  ``
+  ```
 
 ## Key Features
 
@@ -51,7 +51,8 @@ Pipeline	Coordinates the entire ETL process and outputs the final seller_perform
 
 ## Project Structure
 
-`` omnicart_pipeline/
+``` 
+omnicart_pipeline/
 ├── pipeline/
 │   ├── config.py
 │   ├── api_client.py
@@ -67,7 +68,7 @@ Pipeline	Coordinates the entire ETL process and outputs the final seller_perform
 ├── pipeline.cfg
 ├── requirements.txt
 └── README.md
-``
+```
 ## Insights Generated
 
 The DataAnalyzer computes for each seller (username):
@@ -85,10 +86,11 @@ Results are stored in:
 
 ## Running the Pipeline
 
-`` # Install dependencies
-pip install -r requirements.txt
+```
+   # Install dependencies
+  pip install -r requirements.txt
 
-# Run the pipeline
-python main.py
+   # Run the pipeline
+   python main.py
 
-``
+```
