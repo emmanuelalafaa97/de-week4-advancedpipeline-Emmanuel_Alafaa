@@ -7,8 +7,8 @@ users_data = Enricher.users_data_enricher()
 products_data = Enricher.prod_data_enricher()
 
 #convert to a dataframe
-users_data_df = pd.read_csv(r"week4\data_and_other_info\data_exported\users_data.csv")
-prod_data_df = pd.read_csv(r"week4\data_and_other_info\data_exported\products_data.csv")
+users_data_df = pd.read_csv(r"omnicart_pipeline/data_exported/users_data.csv")
+prod_data_df = pd.read_csv(r"omnicart_pipeline/data_exported/products_data.csv")
 
 
 
